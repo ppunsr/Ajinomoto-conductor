@@ -1,0 +1,982 @@
+{
+    "file": "Merkle Thailand -Ajipanda's Kitchen report- 260331  copy.pptx",
+    "total_slides": 7,
+    "slides": [
+        {
+            "slide_number": 1,
+            "shapes": [
+                {
+                    "name": "e29ea854-4048-451f-be27-f2766221ca16-stream.mp4",
+                    "position": {
+                        "left": 0,
+                        "top": 269048,
+                        "width": 12192000,
+                        "height": 6858000
+                    },
+                    "data": {
+                        "type": "OTHER_MEDIA (16)"
+                    }
+                },
+                {
+                    "name": "TextBox 3",
+                    "position": {
+                        "left": 7924224,
+                        "top": 6375395,
+                        "width": 3871538,
+                        "height": 254001
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "\u00a9 2025 Dentsu Solutions Group (Thailand) Co., Ltd. \u000bAll Rights Reserved. Confidential."
+                    }
+                },
+                {
+                    "name": "Image",
+                    "position": {
+                        "left": 555472,
+                        "top": 6443478,
+                        "width": 1200151,
+                        "height": 117834
+                    },
+                    "data": {
+                        "type": "PICTURE"
+                    }
+                },
+                {
+                    "name": "image15.png",
+                    "position": {
+                        "left": 555472,
+                        "top": 3195800,
+                        "width": 3990073,
+                        "height": 502248
+                    },
+                    "data": {
+                        "type": "PICTURE"
+                    }
+                },
+                {
+                    "name": "TextBox 5",
+                    "position": {
+                        "left": 555472,
+                        "top": 4506012,
+                        "width": 3086740,
+                        "height": 584773
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "AjiPanda\u2019s Kitchen User Report & Recommendations"
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 2,
+            "shapes": [
+                {
+                    "name": "Text Placeholder 1",
+                    "position": {
+                        "left": 533400,
+                        "top": 1463038,
+                        "width": 11125200,
+                        "height": 4553716
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Updated User Report (2025/11/28 \u2013 2026/03/31) Recommendations UX/UI Improvements Customer Journey for Rewards Media Performance Report"
+                    }
+                },
+                {
+                    "name": "Title 2",
+                    "position": {
+                        "left": 533400,
+                        "top": 731519,
+                        "width": 11128248,
+                        "height": 612651
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Agenda / Contents"
+                    }
+                },
+                {
+                    "name": "Text Placeholder 3",
+                    "position": {
+                        "left": 533400,
+                        "top": 502919,
+                        "width": 11128248,
+                        "height": 182883
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 3,
+            "shapes": [
+                {
+                    "name": "Chart 2",
+                    "position": {
+                        "left": 5016283,
+                        "top": 995616,
+                        "width": 6885895,
+                        "height": 4031171
+                    },
+                    "data": {
+                        "type": "CHART",
+                        "chart_type": "LINE_MARKERS (65)"
+                    }
+                },
+                {
+                    "name": "Chart 15",
+                    "position": {
+                        "left": 4710048,
+                        "top": 986758,
+                        "width": 7261951,
+                        "height": 3999168
+                    },
+                    "data": {
+                        "type": "CHART",
+                        "chart_type": "LINE_MARKERS (65)"
+                    }
+                },
+                {
+                    "name": "TextBox 4",
+                    "position": {
+                        "left": 7409793,
+                        "top": 6432204,
+                        "width": 4782207,
+                        "height": 307777
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Data Period: 2025/11/28 \u2013 2026/03/31"
+                    }
+                },
+                {
+                    "name": "TextBox 5",
+                    "position": {
+                        "left": 1663975,
+                        "top": 393047,
+                        "width": 1586716,
+                        "height": 400110
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "User Funnel"
+                    }
+                },
+                {
+                    "name": "Straight Connector 6",
+                    "position": {
+                        "left": 4589475,
+                        "top": 1076073,
+                        "width": 0,
+                        "height": 3675793
+                    },
+                    "data": {
+                        "type": "OTHER_LINE (9)"
+                    }
+                },
+                {
+                    "name": "TextBox 8",
+                    "position": {
+                        "left": 7342964,
+                        "top": 393047,
+                        "width": 2232534,
+                        "height": 400110
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "User Engagement"
+                    }
+                },
+                {
+                    "name": "TextBox 10",
+                    "position": {
+                        "left": 279586,
+                        "top": 5252830,
+                        "width": 11622592,
+                        "height": 923330
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Although user stickiness improved (11% \u2192 14%), the decline in Monthly Active Users indicates a shrinking overall user base, while a 55% drop-off before gameplay highlights the need to improve onboarding and retention."
+                    }
+                },
+                {
+                    "name": "TextBox 20",
+                    "position": {
+                        "left": 7076002,
+                        "top": 1378303,
+                        "width": 961159,
+                        "height": 253914
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "February-2026"
+                    }
+                },
+                {
+                    "name": "Rectangle 25",
+                    "position": {
+                        "left": 4888524,
+                        "top": 1318453,
+                        "width": 3567499,
+                        "height": 3376639
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "Rectangle 27",
+                    "position": {
+                        "left": 4710048,
+                        "top": 986758,
+                        "width": 7353422,
+                        "height": 3999168
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "TextBox 32",
+                    "position": {
+                        "left": 10700967,
+                        "top": 1452310,
+                        "width": 797652,
+                        "height": 253914
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "March-2026"
+                    }
+                },
+                {
+                    "name": "TextBox 33",
+                    "position": {
+                        "left": 9130603,
+                        "top": 1840950,
+                        "width": 1931628,
+                        "height": 530915
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Daily Active Users (Avg.): 3.0 Monthly Active Users: 21 User Stickiness: 14%"
+                    }
+                },
+                {
+                    "name": "Straight Arrow Connector 34",
+                    "position": {
+                        "left": 10841264,
+                        "top": 1884150,
+                        "width": 0,
+                        "height": 157256
+                    },
+                    "data": {
+                        "type": "OTHER_LINE (9)"
+                    }
+                },
+                {
+                    "name": "Straight Arrow Connector 35",
+                    "position": {
+                        "left": 10555490,
+                        "top": 2199158,
+                        "width": 0,
+                        "height": 122324
+                    },
+                    "data": {
+                        "type": "OTHER_LINE (9)"
+                    }
+                },
+                {
+                    "name": "Straight Arrow Connector 36",
+                    "position": {
+                        "left": 10607902,
+                        "top": 2027779,
+                        "width": 0,
+                        "height": 157256
+                    },
+                    "data": {
+                        "type": "OTHER_LINE (9)"
+                    }
+                },
+                {
+                    "name": "Rectangle 43",
+                    "position": {
+                        "left": 673099,
+                        "top": 995616,
+                        "width": 3795801,
+                        "height": 3999168
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "Rectangle 41",
+                    "position": {
+                        "left": 1704755,
+                        "top": 2371865,
+                        "width": 2234925,
+                        "height": 369330
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "88% conversion rate\u200b"
+                    }
+                },
+                {
+                    "name": "Rectangle 44",
+                    "position": {
+                        "left": 2043352,
+                        "top": 3412054,
+                        "width": 1557729,
+                        "height": 369330
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "55% drop off"
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 4,
+            "shapes": [
+                {
+                    "name": "Chart 2",
+                    "position": {
+                        "left": 1046170,
+                        "top": 1570066,
+                        "width": 10569351,
+                        "height": 3947054
+                    },
+                    "data": {
+                        "type": "CHART",
+                        "chart_type": "LINE_MARKERS (65)"
+                    }
+                },
+                {
+                    "name": "TextBox 8",
+                    "position": {
+                        "left": 401155,
+                        "top": 300306,
+                        "width": 3327000,
+                        "height": 400110
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Game Performance (Score)"
+                    }
+                },
+                {
+                    "name": "Rectangle 13",
+                    "position": {
+                        "left": 9696046,
+                        "top": 108751,
+                        "width": 2092958,
+                        "height": 1056640
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "TextBox 14",
+                    "position": {
+                        "left": 10198434,
+                        "top": 118590,
+                        "width": 1088183,
+                        "height": 307777
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Total Score"
+                    }
+                },
+                {
+                    "name": "TextBox 15",
+                    "position": {
+                        "left": 9869530,
+                        "top": 513425,
+                        "width": 1745991,
+                        "height": 461665
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "7,796,142"
+                    }
+                },
+                {
+                    "name": "TextBox 22",
+                    "position": {
+                        "left": 337997,
+                        "top": 5517120,
+                        "width": 11442855,
+                        "height": 584775
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Game performance experienced a significant downturn, with the average daily score dropping from 28,986 in February to 12,265 in March. This represents a 57.7% decrease, indicating a sharp decline in player activity and engagement levels."
+                    }
+                },
+                {
+                    "name": "TextBox 1",
+                    "position": {
+                        "left": 7409793,
+                        "top": 6432204,
+                        "width": 4782207,
+                        "height": 307777
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Data Period: Data Period: 2025/11/28 \u2013 2026/03/31"
+                    }
+                },
+                {
+                    "name": "Rectangle 5",
+                    "position": {
+                        "left": 803082,
+                        "top": 1558456,
+                        "width": 5685182,
+                        "height": 3267986
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "Rectangle 6",
+                    "position": {
+                        "left": 6506818,
+                        "top": 1558456,
+                        "width": 5196365,
+                        "height": 3267986
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "TextBox 12",
+                    "position": {
+                        "left": 5034145,
+                        "top": 1461100,
+                        "width": 1092605,
+                        "height": 253914
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "February-2026"
+                    }
+                },
+                {
+                    "name": "TextBox 16",
+                    "position": {
+                        "left": 6980948,
+                        "top": 1461100,
+                        "width": 905054,
+                        "height": 253914
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "March-2026"
+                    }
+                },
+                {
+                    "name": "Rectangle 18",
+                    "position": {
+                        "left": 4971085,
+                        "top": 1771641,
+                        "width": 1509713,
+                        "height": 811164
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "TextBox 20",
+                    "position": {
+                        "left": 4972370,
+                        "top": 1819283,
+                        "width": 1507144,
+                        "height": 261610
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "AVG Score per Day"
+                    }
+                },
+                {
+                    "name": "TextBox 27",
+                    "position": {
+                        "left": 5207210,
+                        "top": 2094091,
+                        "width": 906017,
+                        "height": 338554
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "28,986"
+                    }
+                },
+                {
+                    "name": "Rectangle 28",
+                    "position": {
+                        "left": 7716645,
+                        "top": 1914415,
+                        "width": 1637452,
+                        "height": 1129868
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "TextBox 29",
+                    "position": {
+                        "left": 7845668,
+                        "top": 1962057,
+                        "width": 1507144,
+                        "height": 261610
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "AVG Score per Day"
+                    }
+                },
+                {
+                    "name": "TextBox 30",
+                    "position": {
+                        "left": 8080508,
+                        "top": 2236865,
+                        "width": 906017,
+                        "height": 338554
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "12,265"
+                    }
+                },
+                {
+                    "name": "TextBox 32",
+                    "position": {
+                        "left": 7954122,
+                        "top": 2616617,
+                        "width": 1160895,
+                        "height": 338554
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "(-57.7%)"
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 5,
+            "shapes": [
+                {
+                    "name": "Chart 10",
+                    "position": {
+                        "left": 306617,
+                        "top": 1738914,
+                        "width": 11533889,
+                        "height": 3262024
+                    },
+                    "data": {
+                        "type": "CHART",
+                        "chart_type": "LINE_MARKERS (65)"
+                    }
+                },
+                {
+                    "name": "TextBox 8",
+                    "position": {
+                        "left": 269132,
+                        "top": 300306,
+                        "width": 3591048,
+                        "height": 400110
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Game Performance (Time)"
+                    }
+                },
+                {
+                    "name": "Rectangle 13",
+                    "position": {
+                        "left": 9705855,
+                        "top": 108751,
+                        "width": 2092958,
+                        "height": 1056640
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "TextBox 14",
+                    "position": {
+                        "left": 9759114,
+                        "top": 118590,
+                        "width": 1986441,
+                        "height": 307777
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Total Time Duration"
+                    }
+                },
+                {
+                    "name": "TextBox 15",
+                    "position": {
+                        "left": 10017417,
+                        "top": 391831,
+                        "width": 1561646,
+                        "height": 677108
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "7,876 (131.16 Hours)"
+                    }
+                },
+                {
+                    "name": "TextBox 22",
+                    "position": {
+                        "left": 337997,
+                        "top": 5447205,
+                        "width": 11471131,
+                        "height": 800219
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Player engagement time has declined significantly, with the average daily session dropping from 32 minute in February to 15 minute in March  a 53.1% decrease. This reduction in playtime correlates with lower scores, indicating a critical loss of user interest."
+                    }
+                },
+                {
+                    "name": "TextBox 3",
+                    "position": {
+                        "left": 7409793,
+                        "top": 6432204,
+                        "width": 4782207,
+                        "height": 307777
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Data Period: Data Period: 2025/11/28 \u2013 2026/03/31"
+                    }
+                },
+                {
+                    "name": "Chart 1",
+                    "position": {
+                        "left": 182033,
+                        "top": 1720206,
+                        "width": 11616780,
+                        "height": 3262024
+                    },
+                    "data": {
+                        "type": "CHART",
+                        "chart_type": "LINE_MARKERS (65)"
+                    }
+                },
+                {
+                    "name": "Rectangle 2",
+                    "position": {
+                        "left": 479502,
+                        "top": 1720206,
+                        "width": 5616498,
+                        "height": 3262024
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "Rectangle 4",
+                    "position": {
+                        "left": 6096000,
+                        "top": 1720206,
+                        "width": 5713128,
+                        "height": 3262024
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "Rectangle 5",
+                    "position": {
+                        "left": 3801258,
+                        "top": 2010918,
+                        "width": 1509713,
+                        "height": 868880
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "TextBox 6",
+                    "position": {
+                        "left": 3854641,
+                        "top": 2058560,
+                        "width": 1402948,
+                        "height": 253916
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "AVG Time per Day"
+                    }
+                },
+                {
+                    "name": "TextBox 7",
+                    "position": {
+                        "left": 4037383,
+                        "top": 2333368,
+                        "width": 1236236,
+                        "height": 338554
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "32 minute"
+                    }
+                },
+                {
+                    "name": "TextBox 9",
+                    "position": {
+                        "left": 4037383,
+                        "top": 1606226,
+                        "width": 1092605,
+                        "height": 253914
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "February-2026"
+                    }
+                },
+                {
+                    "name": "TextBox 16",
+                    "position": {
+                        "left": 6750204,
+                        "top": 1593249,
+                        "width": 905054,
+                        "height": 253914
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "March-2026"
+                    }
+                },
+                {
+                    "name": "Rectangle 17",
+                    "position": {
+                        "left": 7601244,
+                        "top": 1963000,
+                        "width": 1509713,
+                        "height": 891879
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "TextBox 18",
+                    "position": {
+                        "left": 7654629,
+                        "top": 2010642,
+                        "width": 1402948,
+                        "height": 253916
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "AVG Time per Day"
+                    }
+                },
+                {
+                    "name": "TextBox 30",
+                    "position": {
+                        "left": 7791684,
+                        "top": 2223665,
+                        "width": 1297151,
+                        "height": 523220
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "15 minute  (- 53.1%)"
+                    }
+                },
+                {
+                    "name": "Straight Arrow Connector 31",
+                    "position": {
+                        "left": 7785101,
+                        "top": 2264558,
+                        "width": 0,
+                        "height": 338554
+                    },
+                    "data": {
+                        "type": "OTHER_LINE (9)"
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 6,
+            "shapes": [
+                {
+                    "name": "TextBox 4",
+                    "position": {
+                        "left": 2060279,
+                        "top": 489835,
+                        "width": 2453813,
+                        "height": 400110
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Most-played stages"
+                    }
+                },
+                {
+                    "name": "TextBox 5",
+                    "position": {
+                        "left": 8141453,
+                        "top": 489834,
+                        "width": 2564741,
+                        "height": 400110
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Most-cooked menus"
+                    }
+                },
+                {
+                    "name": "TextBox 8",
+                    "position": {
+                        "left": 675523,
+                        "top": 4554068,
+                        "width": 5533009,
+                        "height": 1477328
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Users show a strong preference for 'Everyday Comfort Foods', with 'Umami Daily' being the top stage and \u0e02\u0e49\u0e32\u0e27\u0e1c\u0e31\u0e14\u0e2b\u0e21\u0e39 leading the menu choices, suggesting future content should focus on familiar, daily recipes."
+                    }
+                },
+                {
+                    "name": "TextBox 3",
+                    "position": {
+                        "left": 7409793,
+                        "top": 6432204,
+                        "width": 4782207,
+                        "height": 307777
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Data Period: Data Period: 2025/11/28 \u2013 2026/03/31"
+                    }
+                },
+                {
+                    "name": "Rectangle 6",
+                    "position": {
+                        "left": 675523,
+                        "top": 1271239,
+                        "width": 5533009,
+                        "height": 2944102
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": ""
+                    }
+                },
+                {
+                    "name": "Chart 2",
+                    "position": {
+                        "left": 872285,
+                        "top": 1345930,
+                        "width": 5006001,
+                        "height": 2794720
+                    },
+                    "data": {
+                        "type": "CHART",
+                        "chart_type": "BAR_CLUSTERED (57)"
+                    }
+                },
+                {
+                    "name": "Chart 7",
+                    "position": {
+                        "left": 6600560,
+                        "top": 889944,
+                        "width": 4719155,
+                        "height": 5365553
+                    },
+                    "data": {
+                        "type": "CHART",
+                        "chart_type": "BAR_CLUSTERED (57)"
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 7,
+            "shapes": [
+                {
+                    "name": "TextBox 5",
+                    "position": {
+                        "left": 4102294,
+                        "top": 742450,
+                        "width": 3574440,
+                        "height": 461665
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Top Score (Leaderboard)"
+                    }
+                },
+                {
+                    "name": "TextBox 7",
+                    "position": {
+                        "left": 7105643,
+                        "top": 6149856,
+                        "width": 4782207,
+                        "height": 307777
+                    },
+                    "data": {
+                        "type": "TEXT",
+                        "content": "Data Period: Data Period: 2025/11/28 \u2013 2026/03/31"
+                    }
+                },
+                {
+                    "name": "Chart 1",
+                    "position": {
+                        "left": 2033338,
+                        "top": 1588169,
+                        "width": 7658240,
+                        "height": 4284579
+                    },
+                    "data": {
+                        "type": "CHART",
+                        "chart_type": "BAR_CLUSTERED (57)"
+                    }
+                }
+            ]
+        }
+    ]
+}
