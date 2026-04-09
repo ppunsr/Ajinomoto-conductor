@@ -5,7 +5,7 @@ description: Analyzes Excel game data and outputs JSON based on key findings fro
 
 # Excel Data Analyzer
 
-This skill helps extract data from an Excel file and a PowerPoint presentation, correlates the raw Excel data with the Key Findings in the PPTX, and outputs a clean JSON file that is easy to understand.
+This skill helps extract data from an Excel file and a PowerPoint presentation, correlates the raw Excel data with the findings on each slide in the PPTX, and outputs a clean, page-by-page JSON file that is easy to understand.
 
 ## Workflow
 
@@ -15,27 +15,64 @@ This skill helps extract data from an Excel file and a PowerPoint presentation, 
    python {{skill_dir}}/scripts/extract_data.py "<path_to_pptx>" "<path_to_xlsx>"
    ```
 
-2. **Analyze Output**: Read the output of the script, which contains the text from the PPTX slides and a summary of the data from the Excel sheets.
+2. **Analyze Output**: Read the output of the script, which contains the text grouped by slide (e.g., "Slide 1", "Slide 2") from the PPTX and a summary of the data from the Excel sheets.
    
 3. **Correlate and Format**:
-   - Identify the "Key Findings" in the PPTX text.
-   - Look at the Excel data summary and map the corresponding metrics or values that match the Key Findings.
-   - Structure this information into a clear JSON format. For example:
+   - Analyze each slide from the PPTX output.
+   - For each slide (page), identify the title, sections, and key findings/metrics mentioned.
+   - Look at the Excel data summary and map the corresponding metrics or values that support the findings on that specific slide.
+   - Structure this information into a comprehensive JSON format grouped by page, similar to the following example:
      ```json
      {
-       "report_summary": {
-         "key_findings": [
-           {
-             "finding": "Player retention increased by 20% in February",
-             "supporting_data": {
-               "sheet_name": "Retention",
-               "metric": "Retention Rate",
-               "value": "20%"
+       "report_title": "Monthly Report",
+       "pages": [
+         {
+           "page_number": 3,
+           "sections": {
+             "User Funnel": {
+               "metrics": {
+                 "Total click": 572,
+                 "Register": 510,
+                 "Player": 230,
+                 "Conversion rate": "89.1%",
+                 "Drop off": "54.9%"
+               }
+             },
+             "User Engagement": {
+               "comparison": {
+                 "previous_month": "January",
+                 "current_month": "February"
+               },
+               "metrics": {
+                 "Daily Active Users (Avg.)": {
+                   "January": 5.6,
+                   "February": 4.0
+                 },
+                 "Monthly Active Users": {
+                   "January": 82,
+                   "February": 37
+                 },
+                 "User Stickiness": {
+                   "January": "6.83%",
+                   "February": "10.81%"
+                 }
+               }
              }
            }
-         ]
-       }
+         },
+         {
+           "page_number": 4,
+           "title": "Game Performance (Score)",
+           "metrics": {
+             "AVG Score per Day": {
+               "January": 87248,
+               "February": 28986,
+               "difference": "-66.8%"
+             }
+           }
+         }
+       ]
      }
      ```
 
-4. **Write JSON**: Write the final formatted JSON to a file named `analysis_output.json` (or whatever the user specifies) using the `write_file` tool.
+4. **Write JSON**: Write the final formatted JSON to a file (like `analysis_output.json`, or whatever the user specifies) using the `write_file` tool.
