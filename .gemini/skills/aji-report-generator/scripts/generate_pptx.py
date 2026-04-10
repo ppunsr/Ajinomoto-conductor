@@ -74,7 +74,8 @@ def analyze_data(excel_path, month_str):
         d = ws_ti.cell(row=r, column=1).value
         if isinstance(d, datetime):
             val = ws_ti.cell(row=r, column=2).value or 0
-            if d.date() <= report_end_date: total_time_sum += val
+            val_col3 = ws_ti.cell(row=r, column=3).value or 0
+            if d.date() <= report_end_date: total_time_sum += val_col3
             if d.strftime('%b').lower() in [m_prev, m_target]: time_rows.append({'row': r, 'date': to_excel_date(d), 'val': val})
     res['time'] = time_rows
     
