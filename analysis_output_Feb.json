@@ -1,9 +1,9 @@
 {
-  "report_title": "February Report",
+  "report_title": "AjiPanda’s Kitchen User Report & Recommendations",
   "pages": [
     {
       "page_number": 3,
-      "insight": "Although user stickiness improved (6.8% → 10.8%), the decline in Monthly Active Users indicates a shrinking overall user base, while a 54.9% drop-off before gameplay highlights the need to improve onboarding and retention.",
+      "key_finding": "Despite an increase in user stickiness to 10.8%, the 55% drop in MAU signals a shrinking user base. Furthermore, the 54.9% pre-gameplay drop-off highlights a critical need to drastically improve early onboarding retention.",
       "sections": {
         "User Funnel": {
           "metrics": {
@@ -29,8 +29,8 @@
               "February": 37
             },
             "User Stickiness": {
-              "January": "6.8%",
-              "February": "10.8%"
+              "January": "6.83%",
+              "February": "10.81%"
             }
           }
         }
@@ -39,7 +39,7 @@
     {
       "page_number": 4,
       "title": "Game Performance (Score)",
-      "insight": "Game performance experienced a significant downturn, with the average daily score dropping from 87,248 in January to 28,986 in February. This represents a 66.8% decrease, indicating a sharp decline in player activity and engagement levels.",
+      "key_finding": "Game performance saw a steep decline, with the average daily score dropping 66.8% from 87,248 in January to 28,986 in February. This drastic reduction suggests the remaining user base is completing significantly fewer levels per session.",
       "metrics": {
         "AVG Score per Day": {
           "January": 87248,
@@ -51,13 +51,22 @@
     {
       "page_number": 5,
       "title": "Game Performance (Time)",
-      "insight": "Player engagement time has declined significantly, with the average daily session dropping from 87 minute in January to 32 minute in February a 63.1% decrease. This reduction in playtime correlates with lower scores, indicating a critical loss of user interest.",
+      "key_finding": "Session durations dropped by 63.1%, falling from 32 minutes in January to just 15 minutes. This severe contraction in playtime aligns with lower scores and points to an urgent need for fresh re-engagement mechanics.",
       "metrics": {
         "AVG Time per Day": {
-          "January": "87 minute",
-          "February": "32 minute",
+          "January": "32 minute",
+          "February": "15 minute",
           "difference": "-63.1%"
         }
+      }
+    },
+    {
+      "page_number": 6,
+      "title": "Most-played stages | Most-cooked menus",
+      "key_finding": "Players heavily favor everyday meals, with 'Umami Daily' as the top stage and 'ข้าวผัดหมู' as the leading menu. Future content updates should leverage these relatable themes to re-attract lapsed players effectively.",
+      "metrics": {
+        "Top Stage": "Umami Daily",
+        "Top Menu": "ข้าวผัดหมู"
       }
     }
   ]

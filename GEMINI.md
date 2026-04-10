@@ -19,6 +19,9 @@ Ajinomoto-conductor is an automated data analysis and reporting workspace. It ut
 ## Usage and Development
 This workspace is designed to be interacted with via the Gemini CLI, leveraging the custom skills. 
 
-- To analyze data and generate a JSON report, invoke the `excel-data-analyzer` skill. It runs Python extraction scripts against the PPTX and XLSX files and correlates the findings.
-- To update charts within the Excel file for a specific month, use the `excel-graph-updater` skill.
+**The End-to-End Generation Workflow:**
+1.  **Sync Excel:** Run `excel-graph-updater` (or let the generator handle it) to slice the Excel charts for the target month.
+2.  **Generate Insights (JSON):** Invoke the `excel-data-analyzer` skill to correlate the new Excel data against the template and generate tailored insights. This outputs a JSON file (e.g., `analysis_output_[Month].json`).
+3.  **Generate PPTX:** Invoke the `aji-report-generator` skill (e.g., "Give me a report in [Month]"). This script will parse the newly created JSON insights and surgically construct the PowerPoint presentation, injecting both the hard metrics and the custom `key_finding` paragraphs.
+
 - The Python scripts in the root directory serve as testing and inspection utilities for the core logic used within the skills.
