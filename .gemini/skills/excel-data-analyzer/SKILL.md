@@ -21,6 +21,7 @@ This skill helps extract data from an Excel file and a PowerPoint presentation, 
    - Analyze each slide from the PPTX output.
    - For each slide (page), identify the title, sections, and key findings/metrics mentioned.
    - Look at the Excel data summary and map the corresponding metrics or values that support the findings on that specific slide.
+   - **Act as a Senior Data Analyst:** Generate free-form, insightful sentences based on the *actual data* present, rather than strictly trying to match the original slide's format or static insights. Your `key_finding` for each page should be a data-driven narrative that summarizes the new metrics and trends accurately.
    - Structure this information into a comprehensive JSON format grouped by page, similar to the following example:
      ```json
      {
@@ -28,6 +29,8 @@ This skill helps extract data from an Excel file and a PowerPoint presentation, 
        "pages": [
          {
            "page_number": 3,
+           "title": "User Funnel | User Engagement",
+           "key_finding": "While user stickiness improved to 14.3%, overall Monthly Active Users declined from 37 to 21. A 55.4% drop-off in the funnel indicates a need to address onboarding retention.",
            "sections": {
              "User Funnel": {
                "metrics": {
@@ -63,6 +66,7 @@ This skill helps extract data from an Excel file and a PowerPoint presentation, 
          {
            "page_number": 4,
            "title": "Game Performance (Score)",
+           "key_finding": "Game performance experienced a significant downturn, with the average daily score dropping by 66.8% from January to February.",
            "metrics": {
              "AVG Score per Day": {
                "January": 87248,

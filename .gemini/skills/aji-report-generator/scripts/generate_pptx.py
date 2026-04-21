@@ -140,6 +140,8 @@ def update_pptx(excel_path, template_path, output_path, month):
         p3 = next((p for p in jdata.get("pages", []) if p["page_number"] == 3), None)
         p4 = next((p for p in jdata.get("pages", []) if p["page_number"] == 4), None)
         p5 = next((p for p in jdata.get("pages", []) if p["page_number"] == 5), None)
+        p6 = next((p for p in jdata.get("pages", []) if p["page_number"] == 6), None)
+        p7 = next((p for p in jdata.get("pages", []) if p["page_number"] == 7), None)
 
         prev_m = None
         curr_m = None
@@ -255,13 +257,25 @@ def update_pptx(excel_path, template_path, output_path, month):
         s = res['stats']
         
         # Dynamic Analysis Paragraph replacement
-        stick_trend = "improved" if s["stickiness"] >= s["prev_stickiness"] else "declined"
-        mau_trend = "increase" if s["mau"] >= s["prev_mau"] else "decline"
-        mau_context = "a growing overall user base" if s["mau"] >= s["prev_mau"] else "a shrinking overall user base"
-        
-        content = re.sub(r'Although user stickiness improved \(11% → ', f'Although user stickiness {stick_trend} ({s["prev_stickiness"]:.0f}% → ', content)
-        content = re.sub(r'the decline in Monthly Active Users indicates a shrinking overall user base', f'the {mau_trend} in Monthly Active Users indicates {mau_context}', content)
-        
+        def replace_paragraph(xml_content, marker, new_text):
+            idx = xml_content.find(marker)
+            if idx != -1:
+                start_p = xml_content.rfind('<a:p>', 0, idx)
+                end_p = xml_content.find('</a:p>', idx) + 6
+                if start_p != -1 and end_p != -1:
+                    new_p = f'<a:p><a:r><a:rPr lang="en-US" sz="1400"/><a:t>{new_text}</a:t></a:r></a:p>'
+                    return xml_content[:start_p] + new_p + xml_content[end_p:]
+            return xml_content
+            
+        if filename == 'slide3.xml' and p3 and 'key_finding' in p3:
+            content = replace_paragraph(content, "Although user stickiness improved", p3['key_finding'])
+        elif filename == 'slide4.xml' and p4 and 'key_finding' in p4:
+            content = replace_paragraph(content, "Game performance experienced a significant downturn", p4['key_finding'])
+        elif filename == 'slide5.xml' and p5 and 'key_finding' in p5:
+            content = replace_paragraph(content, "Player engagement time has declined significantly", p5['key_finding'])
+        elif filename == 'slide6.xml' and p6 and 'key_finding' in p6:
+            content = replace_paragraph(content, "Users show a strong preference for", p6['key_finding'])
+            
         if 'Daily Active Users' in content:
             idx = content.find('Daily Active Users')
             start_idx = content.rfind('<p:sp>', 0, idx)

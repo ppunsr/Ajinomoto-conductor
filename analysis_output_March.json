@@ -1,0 +1,93 @@
+{
+  "report_title": "Monthly Report - March 2026",
+  "pages": [
+    {
+      "page_number": 3,
+      "title": "User Funnel | User Engagement",
+      "key_finding": "While user stickiness showed a positive trend, increasing to 14.3% in March, the overall user base contracted significantly, with Monthly Active Users falling from 37 to 21. Additionally, a steep drop-off between total clicks (644) and actual players (252) suggests considerable friction in the onboarding process that needs to be addressed.",
+      "sections": {
+        "User Funnel": {
+          "metrics": {
+            "Total click": 644,
+            "Register": 565,
+            "Player": 252,
+            "Conversion rate": "87.7%",
+            "Drop off": "55.4%"
+          }
+        },
+        "User Engagement": {
+          "comparison": {
+            "previous_month": "February",
+            "current_month": "March"
+          },
+          "metrics": {
+            "Daily Active Users (Avg.)": {
+              "February": 4.0,
+              "March": 3.0
+            },
+            "Monthly Active Users": {
+              "February": 37,
+              "March": 21
+            },
+            "User Stickiness": {
+              "February": "10.81%",
+              "March": "14.29%"
+            }
+          }
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "title": "Game Performance (Score)",
+      "key_finding": "Game performance continued a downward trajectory, with the average daily score plunging by 57.7% from 28,986 in February to 12,265 in March, indicating a severe contraction in daily player activity.",
+      "metrics": {
+        "AVG Score per Day": {
+          "February": 28986,
+          "March": 12265,
+          "difference": "-57.7%"
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "title": "Game Performance (Time)",
+      "key_finding": "Player engagement duration mirrored the decline in scores, as the average daily playtime fell sharply by 53.3% to 15 minutes, highlighting a broader challenge in sustaining user interest over the month.",
+      "metrics": {
+        "AVG Time per Day": {
+          "February": 32,
+          "March": 15,
+          "difference": "-53.3%"
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "title": "Most-played stages | Most-cooked menus",
+      "key_finding": "Users demonstrated a strong preference for routine comfort meals, prominently featuring 'Umami Daily' as the most played stage and 'โจ๊กหมู' as the most frequently cooked menu item.",
+      "metrics": {
+        "Top Stage": "Umami Daily",
+        "Top Menu": "โจ๊กหมู"
+      }
+    },
+    {
+      "page_number": 7,
+      "title": "Top Score (Leaderboard)",
+      "key_finding": "The leaderboard shows highly concentrated engagement among top players, led by 'Tae Tualek' who secured a dominant high score of 534,990, followed by 'ชมภูนุช995' at 392,510.",
+      "metrics": {
+        "Top 1": {
+          "name": "Tae Tualek",
+          "score": 534990
+        },
+        "Top 2": {
+          "name": "ชมภูนุช995",
+          "score": 392510
+        },
+        "Top 3": {
+          "name": "Oum",
+          "score": 106370
+        }
+      }
+    }
+  ]
+}
