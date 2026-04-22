@@ -4,7 +4,7 @@
     {
       "page_number": 3,
       "title": "User Funnel | User Engagement",
-      "key_finding": "Although user stickiness improved from 6.8% to 10.8%, overall Monthly Active Users declined from 82 to 37. A 54.9% drop-off in the funnel indicates a need to address onboarding retention.",
+      "key_finding": "February saw a severe 55% contraction in the active user base, with MAU plummeting from 82 to 37. While 'user stickiness' mathematically increased to 10.8%, this is a false positive caused by casual users abandoning the game faster than core users. Furthermore, a critical friction point exists post-registration, where 54.9% of users drop off before becoming active players.",
       "sections": {
         "User Funnel": {
           "metrics": {
@@ -40,7 +40,7 @@
     {
       "page_number": 4,
       "title": "Game Performance (Score)",
-      "key_finding": "Game performance experienced a significant downturn, with the average daily score dropping by 66.8% from 87,248 in January to 28,986 in February.",
+      "key_finding": "The contraction in the user base directly impacted gameplay volume. Average daily scores collapsed by 66.8%, falling from 87,248 points in January to just 28,986 in February, indicating that the remaining users are not playing enough to compensate for the lost audience.",
       "metrics": {
         "AVG Score per Day": {
           "January": 87248,
@@ -52,7 +52,7 @@
     {
       "page_number": 5,
       "title": "Game Performance (Time)",
-      "key_finding": "Player engagement time has declined significantly, with the average daily session dropping from 87 minutes in January to 32 minutes in February. This 63.1% decrease correlates with lower scores and indicates a critical loss of user interest.",
+      "key_finding": "Session depth has deteriorated alongside player retention. The average daily playtime shrank drastically from 87 minutes to 32 minutes (-63.1%). Players are not only fewer in number, but those who do log in are abandoning their sessions much faster than in January.",
       "metrics": {
         "AVG Time per Day": {
           "January": "87 minute",
@@ -64,7 +64,7 @@
     {
       "page_number": 6,
       "title": "Most-played stages | Most-cooked menus",
-      "key_finding": "Users show a strong preference for 'Everyday Comfort Foods', with 'Umami Daily' being the top stage and ข้าวผัดหมู leading the menu choices, suggesting future content should focus on familiar, daily recipes."
+      "key_finding": "Despite the severe drop in overall engagement, the core gameplay loop remains anchored in 'Everyday Comfort Foods'. The 'Umami Daily' stage and 'ข้าวผัดหมู' recipe dominate player choices. To re-engage lapsed users, we should leverage these proven, familiar themes in our next retention campaign."
     }
   ]
 }

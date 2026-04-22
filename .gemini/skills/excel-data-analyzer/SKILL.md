@@ -21,8 +21,8 @@ This skill helps extract data from an Excel file and a PowerPoint presentation, 
    - Analyze each slide from the PPTX output.
    - For each slide (page), identify the title, sections, and key findings/metrics mentioned.
    - Look at the Excel data summary and map the corresponding metrics or values that support the findings on that specific slide.
-   - **Act as a Senior Data Analyst:** Generate free-form, insightful sentences based on the *actual data* present, rather than strictly trying to match the original slide's format or static insights. Your `key_finding` for each page should be a data-driven narrative that summarizes the new metrics and trends accurately.
-   - Structure this information into a comprehensive JSON format grouped by page, similar to the following example:
+   - **CRITICAL MANDATE - Act as a Senior Data Analyst:** You MUST write a 100% genuine, data-driven analysis for the `key_finding` property on each page. Do NOT copy the wording, sentence structure, or narrative of the example JSON below. Do NOT use placeholder text. Calculate the real percentage changes, identify the true trends (e.g., "Is a stickiness increase a false positive due to MAU dropping?"), and write actionable insights based on the *actual* numbers you extracted.
+   - Structure this information into a comprehensive JSON format grouped by page, similar to the structural example below (but with YOUR unique analysis injected):
      ```json
      {
        "report_title": "Monthly Report",
@@ -30,7 +30,7 @@ This skill helps extract data from an Excel file and a PowerPoint presentation, 
          {
            "page_number": 3,
            "title": "User Funnel | User Engagement",
-           "key_finding": "While user stickiness improved to 14.3%, overall Monthly Active Users declined from 37 to 21. A 55.4% drop-off in the funnel indicates a need to address onboarding retention.",
+           "key_finding": "<WRITE YOUR GENUINE ANALYSIS HERE. EXPLAIN WHAT THE NUMBERS ACTUALLY MEAN. DO NOT CLONE EXAMPLES.>",
            "sections": {
              "User Funnel": {
                "metrics": {
@@ -66,7 +66,7 @@ This skill helps extract data from an Excel file and a PowerPoint presentation, 
          {
            "page_number": 4,
            "title": "Game Performance (Score)",
-           "key_finding": "Game performance experienced a significant downturn, with the average daily score dropping by 66.8% from January to February.",
+           "key_finding": "<WRITE YOUR GENUINE ANALYSIS HERE. DO NOT CLONE EXAMPLES.>",
            "metrics": {
              "AVG Score per Day": {
                "January": 87248,
@@ -80,3 +80,4 @@ This skill helps extract data from an Excel file and a PowerPoint presentation, 
      ```
 
 4. **Write JSON**: Write the final formatted JSON to a file (like `analysis_output.json`, or whatever the user specifies) using the `write_file` tool.
+
