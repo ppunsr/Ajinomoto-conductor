@@ -38,12 +38,11 @@ The PPTX template is unzipped into a temporary workspace. The script then perfor
 **C. Final Assembly**
 Once the XMLs are patched, the script zips the entire directory back into a `.pptx` file. Because only the data values were changed, the original fonts, colors, branding, and complex chart layouts remain exactly as they were in the template.
 
-## Summary of the Automation Chain
-1.  **Extract:** Read target month coordinates from Excel.
-2.  **Patch Excel:** Update internal Excel chart references to the target month to generate a temporary/updated Excel file.
-3.  **Analyze (JSON):** Use `excel-data-analyzer` to analyze the new Excel data and output a structured JSON file (e.g., `analysis_output_Feb.json`) containing fresh insights and key findings.
-4.  **Patch PPTX:** Inject data, metrics, and the new JSON insights directly into the PowerPoint's XML using `generate_pptx.py`.
-5.  **Deliver:** Output a finished, branded report ready for presentation.
+## AI Agent Workflow Mandate (Strict Sequential Execution)
+When asked to generate a report, the AI agent MUST strictly follow these sequential steps without skipping:
+1.  **STEP 1: Sync Excel (`excel-graph-updater`)**: Run `update_graphs.py` to slice the master Excel file for the requested month, creating a new month-specific `.xlsx` file (e.g., `Aji_game copy_Feb.xlsx`).
+2.  **STEP 2: Analyze & Correlate (`excel-data-analyzer`)**: Run `extract_data.py` on the newly created Excel file and template PPTX. The AI must then write a structured JSON file (e.g., `analysis_output_Feb.json`) containing tailored, data-driven key findings.
+3.  **STEP 3: Generate PPTX (`aji-report-generator`)**: Run `generate_pptx.py` to inject the raw Excel data and JSON insights into the PowerPoint template's XML, creating the final `.pptx` report.
 
 ## Skill Locations
 -   `.gemini/skills/aji-report-generator`: The primary skill for generating the end-to-end report.

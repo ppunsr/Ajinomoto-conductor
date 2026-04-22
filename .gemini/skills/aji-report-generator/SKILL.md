@@ -4,27 +4,31 @@ description: Generates a complete PowerPoint report based on Aji_game Excel data
 ---
 # Aji Report Generator Skill
 
-This skill automates the creation of a PowerPoint report using data from the Ajinomoto Game Excel reports, relying on the scripts provided in the skill directory.
+This skill automates the creation of a PowerPoint report using data from the Ajinomoto Game Excel reports. 
+
+**CRITICAL WORKFLOW MANDATE:**
+You MUST execute the following three steps in strict sequential order to generate a report. Never skip directly to generating the PPTX.
 
 <instructions>
-When the user asks to generate the PowerPoint report or use the Aji Report Generator:
+When the user asks to generate the PowerPoint report or use the Aji Report Generator for a specific month (e.g., "February"):
 
-1. Identify the input Excel file containing the data.
-2. Identify the template PowerPoint file to be used.
-3. Identify the target month for the report.
-4. If any of these are not provided, ask the user for them.
-5. Identify the destination path for the final generated PowerPoint.
+1. Identify the input Excel file (e.g., `Aji_game copy.xlsx`), the template PowerPoint file, and the target month.
+2. Validate inputs. If any are missing, ask the user.
 
-Use the provided Python scripts located in this skill's `scripts/` directory to perform the work:
+**STEP 1: Sync Excel (Create Month-Specific Excel File)**
+You MUST first run the `excel-graph-updater` script to slice the Excel charts for the target month.
+- Command: `python3 .gemini/skills/excel-graph-updater/scripts/update_graphs.py "<excel_path>" "<month>"`
+- This will generate a new file like `Aji_game copy_<Month>.xlsx`.
 
-- `update_graph.py`: Can be used to update the Excel file graphs if needed before generating.
-- `generate_pptx.py` or `ppt_surgical.py`: Use these to modify the PowerPoint file based on the surgical replacement methods. You may need to review these scripts to see their expected arguments.
-    - `ppt_surgical.py` expects arguments: `<excel_path> <template_path> <month> <output_path>`
-    - Check the exact script arguments using `run_shell_command` with `-h` or by reading the script headers if necessary.
+**STEP 2: Generate Insights (JSON)**
+You MUST then invoke the `excel-data-analyzer` script and manually construct the JSON analysis based on the output. 
+- Command: `python .gemini/skills/excel-data-analyzer/scripts/extract_data.py "<template_path>" "<new_excel_path>"`
+- Read the output, act as a Senior Data Analyst, and write the structured JSON to `analysis_output_<Month>.json` using the `write_file` tool.
 
-Proceed step-by-step:
-1. Validate inputs.
-2. Run the necessary script via `run_shell_command` with the `python` executable.
+**STEP 3: Generate PPTX**
+Finally, invoke the PowerPoint generator script to inject the JSON insights and Excel data into the new report.
+- Command: `python .gemini/skills/aji-report-generator/scripts/generate_pptx.py "<excel_path>" "<template_path>" "<month>" "<output_pptx_path>"`
+
 3. Output the path of the generated PowerPoint file to the user.
 </instructions>
 

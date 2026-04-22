@@ -1,0 +1,70 @@
+{
+  "report_title": "Monthly Report - February",
+  "pages": [
+    {
+      "page_number": 3,
+      "title": "User Funnel | User Engagement",
+      "key_finding": "Although user stickiness improved from 6.8% to 10.8%, overall Monthly Active Users declined from 82 to 37. A 54.9% drop-off in the funnel indicates a need to address onboarding retention.",
+      "sections": {
+        "User Funnel": {
+          "metrics": {
+            "Total click": 572,
+            "Register": 510,
+            "Player": 230,
+            "Conversion rate": "89.2%",
+            "Drop off": "54.9%"
+          }
+        },
+        "User Engagement": {
+          "comparison": {
+            "previous_month": "January",
+            "current_month": "February"
+          },
+          "metrics": {
+            "Daily Active Users (Avg.)": {
+              "January": 5.6,
+              "February": 4.0
+            },
+            "Monthly Active Users": {
+              "January": 82,
+              "February": 37
+            },
+            "User Stickiness": {
+              "January": "6.83%",
+              "February": "10.81%"
+            }
+          }
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "title": "Game Performance (Score)",
+      "key_finding": "Game performance experienced a significant downturn, with the average daily score dropping by 66.8% from 87,248 in January to 28,986 in February.",
+      "metrics": {
+        "AVG Score per Day": {
+          "January": 87248,
+          "February": 28986,
+          "difference": "-66.8%"
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "title": "Game Performance (Time)",
+      "key_finding": "Player engagement time has declined significantly, with the average daily session dropping from 87 minutes in January to 32 minutes in February. This 63.1% decrease correlates with lower scores and indicates a critical loss of user interest.",
+      "metrics": {
+        "AVG Time per Day": {
+          "January": "87 minute",
+          "February": "32 minute",
+          "difference": "-63.1%"
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "title": "Most-played stages | Most-cooked menus",
+      "key_finding": "Users show a strong preference for 'Everyday Comfort Foods', with 'Umami Daily' being the top stage and ข้าวผัดหมู leading the menu choices, suggesting future content should focus on familiar, daily recipes."
+    }
+  ]
+}

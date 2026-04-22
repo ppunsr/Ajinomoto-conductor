@@ -224,7 +224,7 @@ def update_pptx(excel_path, template_path, output_path, month):
                 content = re.sub(r'<c:val>.*?</c:val>', f'<c:val>{build_num_ref("menu", "B", 2, 1+len(rows), [r[1] for r in rows])}</c:val>', content, flags=re.DOTALL)
                 
         elif 'score!' in content:
-            rows = sorted(get_excel_data(wb, 'score', 2, (2, 3)), key=lambda x: x[1] or 0, reverse=True)[:10]
+            rows = sorted(get_excel_data(wb, 'score', 2, (2, 3)), key=lambda x: x[1] or 0, reverse=True)[:10][::-1]
             if rows:
                 content = re.sub(r'<c:cat>.*?</c:cat>', f'<c:cat>{build_str_ref("score", "B", 2, 1+len(rows), [r[0] for r in rows])}</c:cat>', content, flags=re.DOTALL)
                 content = re.sub(r'<c:val>.*?</c:val>', f'<c:val>{build_num_ref("score", "C", 2, 1+len(rows), [r[1] for r in rows])}</c:val>', content, flags=re.DOTALL)
@@ -298,7 +298,7 @@ def update_pptx(excel_path, template_path, output_path, month):
         content = content.replace('12,265', f'{s["avg_score"]:,.0f}')
         content = content.replace('(-57.7%)', f'({s["score_change"]:.1f}%)')
         
-        content = content.replace('7,876', f'{s["total_time"]:,}')
+        content = content.replace('7,876', f'{int(s["total_time"]):,}')
         content = content.replace('32 minute', f'{s["prev_avg_time"]:.0f} minute')
         content = content.replace('15 minute', f'{s["avg_time"]:.0f} minute')
         content = content.replace('(- 53.1%)', f'({s["time_change"]:.1f}%)')
