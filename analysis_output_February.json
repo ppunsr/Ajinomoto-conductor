@@ -1,17 +1,17 @@
 {
-  "report_title": "Monthly Report - February",
+  "report_title": "Monthly Report",
   "pages": [
     {
       "page_number": 3,
       "title": "User Funnel | User Engagement",
-      "key_finding": "February saw a severe 55% contraction in the active user base, with MAU plummeting from 82 to 37. While 'user stickiness' mathematically increased to 10.8%, this is a false positive caused by casual users abandoning the game faster than core users. Furthermore, a critical friction point exists post-registration, where 54.9% of users drop off before becoming active players.",
+      "key_finding": "In February, User Stickiness improved from 6.83% to 10.81% due to the drop in Monthly Active Users (from 82 to 37) outpacing the drop in Daily Active Users (from 5.7 to 4.0). Despite an excellent 89.1% registration conversion rate, the 54.9% drop-off before gameplay highlights critical onboarding friction that prevents new registrants from converting to active players.",
       "sections": {
         "User Funnel": {
           "metrics": {
             "Total click": 572,
             "Register": 510,
             "Player": 230,
-            "Conversion rate": "89.2%",
+            "Conversion rate": "89.1%",
             "Drop off": "54.9%"
           }
         },
@@ -22,7 +22,7 @@
           },
           "metrics": {
             "Daily Active Users (Avg.)": {
-              "January": 5.6,
+              "January": 5.7,
               "February": 4.0
             },
             "Monthly Active Users": {
@@ -40,7 +40,7 @@
     {
       "page_number": 4,
       "title": "Game Performance (Score)",
-      "key_finding": "The contraction in the user base directly impacted gameplay volume. Average daily scores collapsed by 66.8%, falling from 87,248 points in January to just 28,986 in February, indicating that the remaining users are not playing enough to compensate for the lost audience.",
+      "key_finding": "Average daily scores suffered a drastic 66.8% reduction from 87,248 in January to 28,986 in February. This sharp decline signals a major drop in competitive engagement and player progression, indicating users are either playing fewer rounds or struggling with the content.",
       "metrics": {
         "AVG Score per Day": {
           "January": 87248,
@@ -52,19 +52,14 @@
     {
       "page_number": 5,
       "title": "Game Performance (Time)",
-      "key_finding": "Session depth has deteriorated alongside player retention. The average daily playtime shrank drastically from 87 minutes to 32 minutes (-63.1%). Players are not only fewer in number, but those who do log in are abandoning their sessions much faster than in January.",
+      "key_finding": "Average daily playtime plummeted by 63.2%, from approximately 87 minutes in January to just 32 minutes in February. This severe reduction in time spent in-game perfectly mirrors the drop in scores, pointing to a widespread loss of interest or potential technical hurdles affecting session lengths.",
       "metrics": {
         "AVG Time per Day": {
           "January": "87 minute",
           "February": "32 minute",
-          "difference": "-63.1%"
+          "difference": "-63.2%"
         }
       }
-    },
-    {
-      "page_number": 6,
-      "title": "Most-played stages | Most-cooked menus",
-      "key_finding": "Despite the severe drop in overall engagement, the core gameplay loop remains anchored in 'Everyday Comfort Foods'. The 'Umami Daily' stage and 'ข้าวผัดหมู' recipe dominate player choices. To re-engage lapsed users, we should leverage these proven, familiar themes in our next retention campaign."
     }
   ]
 }

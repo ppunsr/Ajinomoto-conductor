@@ -1,10 +1,10 @@
 {
-  "report_title": "Monthly Report - April",
+  "report_title": "Monthly Report",
   "pages": [
     {
       "page_number": 3,
       "title": "User Funnel | User Engagement",
-      "key_finding": "The active user base experienced a catastrophic decline in April, with Monthly Active Users (MAU) dropping drastically from 21 to just 4. While user stickiness appears to have skyrocketed to 57.5%, this metric is highly distorted by the extremely small remaining user base, indicating that only a handful of highly dedicated players are left. A persistent 55.7% drop-off post-registration continues to be a severe bottleneck.",
+      "key_finding": "In April, the player base reached a critical low with only 4 Monthly Active Users. This causes an extreme anomaly in User Stickiness (jumping to 57.5%), which is purely a statistical artifact of the near-zero denominator. Despite 669 total clicks and an 87.1% registration rate, the persistent 55.7% pre-gameplay drop-off means the game is fundamentally failing to convert interest into actual play.",
       "sections": {
         "User Funnel": {
           "metrics": {
@@ -40,11 +40,11 @@
     {
       "page_number": 4,
       "title": "Game Performance (Score)",
-      "key_finding": "Aggregate scoring plummeted as the active audience evaporated. The average daily score fell by a staggering 64.1%, from 12,265 in March to a mere 4,399 in April. The platform is currently unable to generate meaningful engagement beyond the tiny remaining core audience.",
+      "key_finding": "With the user base severely depleted, the average daily score hit a floor of 4,398 in April, representing a further 64.1% decline from March's 12,265. The competitive ecosystem of the game is essentially dormant.",
       "metrics": {
         "AVG Score per Day": {
           "March": 12265,
-          "April": 4399,
+          "April": 4398,
           "difference": "-64.1%"
         }
       }
@@ -52,19 +52,14 @@
     {
       "page_number": 5,
       "title": "Game Performance (Time)",
-      "key_finding": "Session duration collapsed alongside the player count. Average daily playtime crashed by 67.1%, dropping from roughly 15 minutes in March to just under 5 minutes in April. Even the few remaining users are spending significantly less time in the game during their sessions.",
+      "key_finding": "Daily playtime plummeted to under 5 minutes per day, a 66.7% drop from the previous month. The remaining few players are merely logging in and immediately out, emphasizing that current retention mechanics are entirely ineffective.",
       "metrics": {
         "AVG Time per Day": {
           "March": "15 minute",
           "April": "5 minute",
-          "difference": "-67.1%"
+          "difference": "-66.7%"
         }
       }
-    },
-    {
-      "page_number": 6,
-      "title": "Most-played stages | Most-cooked menus",
-      "key_finding": "Despite the severe drop in overall engagement metrics, player behavior among the remaining core continues to center around established staples. 'Umami Daily' and familiar 'Everyday Comfort Foods' are the primary drivers of the limited activity that persists."
     }
   ]
 }

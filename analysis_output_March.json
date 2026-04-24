@@ -1,10 +1,10 @@
 {
-  "report_title": "Monthly Report - March",
+  "report_title": "Monthly Report",
   "pages": [
     {
       "page_number": 3,
       "title": "User Funnel | User Engagement",
-      "key_finding": "The downward trend in the active user base continued into March, with Monthly Active Users (MAU) dropping from 37 to 21. While user stickiness appears to have improved to 14.3%, this metric is misleading as it merely indicates the remaining core users form a larger percentage of the heavily reduced total audience. A consistent 55.4% drop-off post-registration continues to be a major bottleneck preventing casual users from transitioning into active players.",
+      "key_finding": "March saw User Stickiness artificially inflate to 14.28% as Monthly Active Users nearly halved (from 37 to 21), leaving only the most dedicated core players. While initial registration conversion remains strong at 87.7%, a staggering 55.4% of users still drop off before actually playing, underlining an urgent need for targeted re-engagement campaigns.",
       "sections": {
         "User Funnel": {
           "metrics": {
@@ -40,7 +40,7 @@
     {
       "page_number": 4,
       "title": "Game Performance (Score)",
-      "key_finding": "Overall game activity continues to erode as the user base shrinks. The average daily score fell by a steep 57.7%, down from 28,986 in February to just 12,265 in March. The remaining audience is not generating enough scoring events to sustain the platform's aggregate engagement levels.",
+      "key_finding": "Average daily scores continued to fall rapidly, dropping another 57.7% from 28,986 in February to 12,265 in March. This ongoing downward trend confirms that even the retained player base is becoming less active or less motivated to achieve high scores.",
       "metrics": {
         "AVG Score per Day": {
           "February": 28986,
@@ -52,19 +52,14 @@
     {
       "page_number": 5,
       "title": "Game Performance (Time)",
-      "key_finding": "Player retention within individual sessions remains a critical issue. Average daily playtime was more than halved, plunging from nearly 32 minutes in February to just under 15 minutes in March (-53.3%). Users are churning faster not only on a monthly level, but within the individual play sessions themselves.",
+      "key_finding": "Playtime experienced a parallel decline, falling 53.1% from 32 minutes per day in February to just 15 minutes in March. Without fresh content or engaging events, players are completing shorter sessions and logging off earlier than in previous months.",
       "metrics": {
         "AVG Time per Day": {
           "February": "32 minute",
           "March": "15 minute",
-          "difference": "-53.3%"
+          "difference": "-53.1%"
         }
       }
-    },
-    {
-      "page_number": 6,
-      "title": "Most-played stages | Most-cooked menus",
-      "key_finding": "Despite the persistent drop in engagement metrics, player behavior remains highly predictable. 'Umami Daily' remains the top stage, and 'ข้าวผัดหมู' continues to be the overwhelming favorite menu item. Any future interventions to resurrect user interest should heavily feature these proven 'Everyday Comfort Foods' rather than introducing risky new content."
     }
   ]
 }
