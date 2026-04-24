@@ -43,9 +43,10 @@ def get_excel_data(wb, sheet_name, start_row, cols):
 def analyze_data(excel_path, month_str):
     wb = openpyxl.load_workbook(excel_path, data_only=True)
     m_target = month_str.lower()[:3]
-    m_prev = 'feb' if m_target == 'mar' else 'jan'
-    year = 2026 
     month_num = list(calendar.month_abbr).index(month_str[:3].capitalize())
+    prev_month_num = month_num - 1 if month_num > 1 else 12
+    m_prev = calendar.month_abbr[prev_month_num].lower()
+    year = 2026 
     last_day = calendar.monthrange(year, month_num)[1]
     report_end_date = date(year, month_num, last_day)
     res = {'target_month': m_target, 'prev_month': m_prev, 'end_date': report_end_date}
@@ -80,25 +81,44 @@ def analyze_data(excel_path, month_str):
     res['time'] = time_rows
     
     ws_f = wb['User_funnel']
-    f_col = 3 if m_target == 'mar' else 2
+    f_col = 2
+    for c in range(2, 10):
+        val = ws_f.cell(row=5, column=c).value
+        if val and str(val).lower()[:3] == m_target:
+            f_col = c
+            break
     res['funnel'] = {'cats': ['Totalclick', 'Register', 'Player'], 'vals': [ws_f.cell(row=2, column=f_col).value, ws_f.cell(row=3, column=f_col).value, ws_f.cell(row=4, column=f_col).value]}
     
     res['stats'] = {'dau': 0, 'prev_dau': 0, 'mau': 0, 'prev_mau': 0, 'stickiness': 0, 'prev_stickiness': 0, 'total_score': total_score_sum, 'avg_score': 0, 'prev_avg_score': 0, 'score_change': 0, 'total_time': total_time_sum, 'avg_time': 0, 'prev_avg_time': 0, 'time_change': 0}
     
     ws_ue = wb['User Engagement']
+    target_col = None
+    prev_col = None
+    for r in range(1, 15):
+        for c in range(1, 15):
+            val = ws_ue.cell(row=r, column=c).value
+            if isinstance(val, str) and val.lower() == 'month':
+                for c2 in range(c+1, c+10):
+                    m_val = ws_ue.cell(row=r, column=c2).value
+                    if isinstance(m_val, str):
+                        if m_val.lower().startswith(m_target): target_col = c2
+                        elif m_val.lower().startswith(m_prev): prev_col = c2
+                break
+        if target_col: break
+        
     for r in range(1, 15):
         for c in range(1, 15):
             v = ws_ue.cell(row=r, column=c).value
             if isinstance(v, str):
                 if v == 'Monthly active user': 
-                    res['stats']['mau'] = ws_ue.cell(row=r, column=c + (4 if m_target == 'mar' else 3)).value
-                    res['stats']['prev_mau'] = ws_ue.cell(row=r, column=c + (3 if m_target == 'mar' else 2)).value
+                    if target_col: res['stats']['mau'] = ws_ue.cell(row=r, column=target_col).value
+                    if prev_col: res['stats']['prev_mau'] = ws_ue.cell(row=r, column=prev_col).value
                 if v == 'user stickiness': 
-                    res['stats']['stickiness'] = ws_ue.cell(row=r, column=c + (4 if m_target == 'mar' else 3)).value
-                    res['stats']['prev_stickiness'] = ws_ue.cell(row=r, column=c + (3 if m_target == 'mar' else 2)).value
+                    if target_col: res['stats']['stickiness'] = ws_ue.cell(row=r, column=target_col).value
+                    if prev_col: res['stats']['prev_stickiness'] = ws_ue.cell(row=r, column=prev_col).value
                 if 'Daily active' in v or 'Daily actuve' in v:
-                    res['stats']['dau'] = ws_ue.cell(row=r, column=c + (4 if m_target == 'mar' else 3)).value
-                    res['stats']['prev_dau'] = ws_ue.cell(row=r, column=c + (3 if m_target == 'mar' else 2)).value
+                    if target_col: res['stats']['dau'] = ws_ue.cell(row=r, column=target_col).value
+                    if prev_col: res['stats']['prev_dau'] = ws_ue.cell(row=r, column=prev_col).value
             
     click, reg, play = res['funnel']['vals']
     res['stats']['conv_reg'] = (reg/click*100) if click else 0
@@ -248,11 +268,14 @@ def update_pptx(excel_path, template_path, output_path, month):
         target_full = month.capitalize()
         prev_full = calendar.month_name[list(calendar.month_abbr).index(res['prev_month'].capitalize())]
         
-        content = re.sub(r'February(</a:t>.*?<a:t>)-2026', fr'{prev_full}\1-2026', content)
-        content = content.replace("February-2026", f"{prev_full}-2026")
+        content = re.sub(r'February(</a:t>.*?<a:t>)-2026', fr'__PREV__\1-2026', content)
+        content = content.replace("February-2026", "__PREV__-2026")
         
-        content = re.sub(r'March(</a:t>.*?<a:t>)-2026', fr'{target_full}\1-2026', content)
-        content = content.replace("March-2026", f"{target_full}-2026")
+        content = re.sub(r'March(</a:t>.*?<a:t>)-2026', fr'__TARGET__\1-2026', content)
+        content = content.replace("March-2026", "__TARGET__-2026")
+        
+        content = content.replace("__PREV__", prev_full)
+        content = content.replace("__TARGET__", target_full)
             
         s = res['stats']
         
@@ -282,7 +305,7 @@ def update_pptx(excel_path, template_path, output_path, month):
             end_idx = content.find('</p:sp>', idx) + len('</p:sp>')
             orig_box = content[start_idx:end_idx]
             
-            # Update target month box
+            # The template only has the TARGET month's DAU box (which contains 3.0, 21, 14%).
             target_box = orig_box.replace('3.0</a:t>', f'{s["dau"]:.1f}</a:t>')
             target_box = target_box.replace('>21</a:t>', f'>{s["mau"]:.0f}</a:t>')
             target_box = target_box.replace('>14%</a:t>', f'>{s["stickiness"]:.2f}%</a:t>')
@@ -293,14 +316,22 @@ def update_pptx(excel_path, template_path, output_path, month):
         content = re.sub(r'55% drop off', f'{s["drop_off"]:.0f}% drop off', content)
         content = re.sub(r'55% drop-off', f'{s["drop_off"]:.0f}% drop-off', content)
         
+        # Use placeholders for Score to prevent double replacement
+        content = content.replace('28,986', '__PREV_SCORE__')
+        content = content.replace('12,265', '__TARGET_SCORE__')
+        content = content.replace('__PREV_SCORE__', f'{s["prev_avg_score"]:,.0f}')
+        content = content.replace('__TARGET_SCORE__', f'{s["avg_score"]:,.0f}')
+        
         content = content.replace('7,796,142', f'{s["total_score"]:,}')
-        content = content.replace('28,986', f'{s["prev_avg_score"]:,.0f}')
-        content = content.replace('12,265', f'{s["avg_score"]:,.0f}')
         content = content.replace('(-57.7%)', f'({s["score_change"]:.1f}%)')
         
+        # Use placeholders for Time to prevent double replacement
+        content = content.replace('32 minute', '__PREV_TIME__')
+        content = content.replace('15 minute', '__TARGET_TIME__')
+        content = content.replace('__PREV_TIME__', f'{s["prev_avg_time"]:.0f} minute')
+        content = content.replace('__TARGET_TIME__', f'{s["avg_time"]:.0f} minute')
+        
         content = content.replace('7,876', f'{int(s["total_time"]):,}')
-        content = content.replace('32 minute', f'{s["prev_avg_time"]:.0f} minute')
-        content = content.replace('15 minute', f'{s["avg_time"]:.0f} minute')
         content = content.replace('(- 53.1%)', f'({s["time_change"]:.1f}%)')
         
         if 'Hours' in content: 
