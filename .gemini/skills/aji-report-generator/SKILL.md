@@ -21,7 +21,7 @@ You MUST first run the `excel-graph-updater` script to slice the Excel charts fo
 - This will generate a new file like `Aji_game copy_<Month>.xlsx`.
 
 **STEP 2: Generate Insights (JSON)**
-You MUST then invoke the `excel-data-analyzer` script and manually construct the JSON analysis based on the output. 
+You MUST then invoke the `excel-data-analyzer` script and manually construct the JSON analysis based on the output. **NEVER bypass this step (e.g., by restoring deleted JSON files from Git). You MUST actively generate fresh insights every time a report is requested.** 
 - Command: `python .gemini/skills/excel-data-analyzer/scripts/extract_data.py "<template_path>" "<new_excel_path>"`
 - Read the output, act as a Senior Data Analyst, and write the structured JSON to `analysis_output_<Month>.json` using the `write_file` tool.
 

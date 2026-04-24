@@ -153,6 +153,8 @@ def update_pptx(excel_path, template_path, output_path, month):
     
     import json
     json_path = f"analysis_output_{month}.json"
+    
+    p3 = p4 = p5 = p6 = p7 = None
     if os.path.exists(json_path):
         with open(json_path, 'r', encoding='utf-8') as jf:
             jdata = json.load(jf)
@@ -310,7 +312,29 @@ def update_pptx(excel_path, template_path, output_path, month):
             target_box = target_box.replace('>21</a:t>', f'>{s["mau"]:.0f}</a:t>')
             target_box = target_box.replace('>14%</a:t>', f'>{s["stickiness"]:.2f}%</a:t>')
             
-            content = content[:start_idx] + target_box + content[end_idx:]
+            # Create a box for the PREVIOUS month by cloning the target box and shifting it left
+            prev_box = orig_box.replace('3.0</a:t>', f'{s["prev_dau"]:.1f}</a:t>')
+            prev_box = prev_box.replace('>21</a:t>', f'>{s["prev_mau"]:.0f}</a:t>')
+            prev_box = prev_box.replace('>14%</a:t>', f'>{s["prev_stickiness"]:.2f}%</a:t>')
+
+            # Shift X position to center it within the left red rectangle (Rectangle 25)
+            # Rectangle 25 center is 6672273. Prev box width is 1931628. 6672273 - (1931628 / 2) = 5706459
+            prev_box = re.sub(r'<a:off x="\d+"', '<a:off x="5706459"', prev_box)
+
+            # Ensure unique IDs and names for the new shape to avoid corruption or overlap
+            import uuid
+            new_id = str(uuid.uuid4().int % 10000)
+            new_creation_id = str(uuid.uuid4()).upper()
+            prev_box = re.sub(r'id="\d+"', f'id="{new_id}"', prev_box, count=1)
+            prev_box = re.sub(r'name="TextBox \d+"', f'name="TextBox {new_id}"', prev_box, count=1)
+            prev_box = re.sub(r'creationId id="\{[A-F0-9-]+\}"', f'creationId id="{{{new_creation_id}}}"', prev_box, count=1)
+
+            content = content[:start_idx] + prev_box + target_box + content[end_idx:]
+            
+            # Remove the hardcoded previous month image (rId4) which contained the old Feb data
+            if filename == 'slide3.xml':
+                content = re.sub(r'<p:pic>.*?<a:blip r:embed="rId4".*?</p:pic>', '', content, flags=re.DOTALL)
+
             
         content = re.sub(r'88% conversion rate', f'{s["conv_reg"]:.0f}% conversion rate', content)
         content = re.sub(r'55% drop off', f'{s["drop_off"]:.0f}% drop off', content)
