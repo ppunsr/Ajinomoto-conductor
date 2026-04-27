@@ -292,8 +292,10 @@ def update_pptx(excel_path, template_path, output_path, month):
         path = os.path.join(slides_dir, filename)
         with open(path, 'r', encoding='utf-8') as f: content = f.read()
         orig = content
-        
-        content = content.replace("2025/11/28 – 2026/03/31", f"2025/11/28 - {res['end_date'].strftime('%Y/%m/%d')}")
+
+        content = content.replace("Data Period: Data Period:", "Data Period:")
+        content = re.sub(r'2025/11/28\s*.\s*2026/0(?:</a:t>.*?<a:t>)*?3(?:</a:t>.*?<a:t>)*?/31', f"2025/11/28 - {res['end_date'].strftime('%Y/%m/%d')}", content)
+
         target_full = month.capitalize()
         prev_full = calendar.month_name[list(calendar.month_abbr).index(res['prev_month'].capitalize())]
         
