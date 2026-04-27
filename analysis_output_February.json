@@ -4,15 +4,12 @@
     {
       "page_number": 3,
       "title": "User Funnel | User Engagement",
-      "key_finding": "In February, User Stickiness improved from 6.83% to 10.81% due to the drop in Monthly Active Users (from 82 to 37) outpacing the drop in Daily Active Users (from 5.7 to 4.0). Despite an excellent 89.1% registration conversion rate, the 54.9% drop-off before gameplay highlights critical onboarding friction that prevents new registrants from converting to active players.",
+      "key_finding": "Although user stickiness improved (11% → 14%), the decline in Monthly Active Users indicates a shrinking overall user base, while a 55% drop-off before gameplay highlights the need to improve onboarding and retention.",
       "sections": {
         "User Funnel": {
           "metrics": {
-            "Total click": 572,
-            "Register": 510,
-            "Player": 230,
-            "Conversion rate": "89.1%",
-            "Drop off": "54.9%"
+            "Conversion rate": "88%",
+            "Drop off": "55%"
           }
         },
         "User Engagement": {
@@ -22,15 +19,15 @@
           },
           "metrics": {
             "Daily Active Users (Avg.)": {
-              "January": 5.7,
-              "February": 4.0
+              "January": "5.6",
+              "February": "4.0"
             },
             "Monthly Active Users": {
-              "January": 82,
-              "February": 37
+              "January": "82",
+              "February": "37"
             },
             "User Stickiness": {
-              "January": "6.83%",
+              "January": "6.8%",
               "February": "10.81%"
             }
           }
@@ -40,11 +37,11 @@
     {
       "page_number": 4,
       "title": "Game Performance (Score)",
-      "key_finding": "Average daily scores suffered a drastic 66.8% reduction from 87,248 in January to 28,986 in February. This sharp decline signals a major drop in competitive engagement and player progression, indicating users are either playing fewer rounds or struggling with the content.",
+      "key_finding": "Game performance experienced a significant downturn, with the average daily score dropping.",
       "metrics": {
         "AVG Score per Day": {
-          "January": 87248,
-          "February": 28986,
+          "January": "87248",
+          "February": "28986",
           "difference": "-66.8%"
         }
       }
@@ -52,14 +49,19 @@
     {
       "page_number": 5,
       "title": "Game Performance (Time)",
-      "key_finding": "Average daily playtime plummeted by 63.2%, from approximately 87 minutes in January to just 32 minutes in February. This severe reduction in time spent in-game perfectly mirrors the drop in scores, pointing to a widespread loss of interest or potential technical hurdles affecting session lengths.",
+      "key_finding": "Player engagement time has declined significantly, indicating a critical loss of user interest.",
       "metrics": {
         "AVG Time per Day": {
-          "January": "87 minute",
+          "January": "86 minute",
           "February": "32 minute",
-          "difference": "-63.2%"
+          "difference": "-62.8%"
         }
       }
+    },
+    {
+      "page_number": 6,
+      "title": "Most-played stages | Most-cooked menus",
+      "key_finding": "Users show a strong preference for 'Everyday Comfort Foods', with 'Umami Daily' being the top stage and ข้าวผัดหมู leading the menu choices, suggesting future content should focus on familiar, daily recipes."
     }
   ]
 }

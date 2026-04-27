@@ -8,9 +8,6 @@
       "sections": {
         "User Funnel": {
           "metrics": {
-            "Total click": 669,
-            "Register": 583,
-            "Player": 258,
             "Conversion rate": "87.1%",
             "Drop off": "55.7%"
           }
@@ -22,16 +19,16 @@
           },
           "metrics": {
             "Daily Active Users (Avg.)": {
-              "March": 3.0,
-              "April": 2.3
+              "March": "3.0",
+              "April": "2.3"
             },
             "Monthly Active Users": {
-              "March": 21,
-              "April": 4
+              "March": "21",
+              "April": "4"
             },
             "User Stickiness": {
               "March": "14.28%",
-              "April": "57.50%"
+              "April": "57.5%"
             }
           }
         }
@@ -43,8 +40,8 @@
       "key_finding": "With the user base severely depleted, the average daily score hit a floor of 4,398 in April, representing a further 64.1% decline from March's 12,265. The competitive ecosystem of the game is essentially dormant.",
       "metrics": {
         "AVG Score per Day": {
-          "March": 12265,
-          "April": 4398,
+          "March": "12265",
+          "April": "4398",
           "difference": "-64.1%"
         }
       }
@@ -52,7 +49,7 @@
     {
       "page_number": 5,
       "title": "Game Performance (Time)",
-      "key_finding": "Daily playtime plummeted to under 5 minutes per day, a 66.7% drop from the previous month. The remaining few players are merely logging in and immediately out, emphasizing that current retention mechanics are entirely ineffective.",
+      "key_finding": "Player engagement time has collapsed to an average of just 5 minutes per day, a 66.7% drop from March. The few remaining users are barely interacting with the platform.",
       "metrics": {
         "AVG Time per Day": {
           "March": "15 minute",
@@ -60,6 +57,11 @@
           "difference": "-66.7%"
         }
       }
+    },
+    {
+      "page_number": 6,
+      "title": "Most-played stages | Most-cooked menus",
+      "key_finding": "With minimal activity, stage and menu preferences have stagnated."
     }
   ]
 }

@@ -8,9 +8,6 @@
       "sections": {
         "User Funnel": {
           "metrics": {
-            "Total click": 644,
-            "Register": 565,
-            "Player": 252,
             "Conversion rate": "87.7%",
             "Drop off": "55.4%"
           }
@@ -22,12 +19,12 @@
           },
           "metrics": {
             "Daily Active Users (Avg.)": {
-              "February": 4.0,
-              "March": 3.0
+              "February": "4.0",
+              "March": "3.0"
             },
             "Monthly Active Users": {
-              "February": 37,
-              "March": 21
+              "February": "37",
+              "March": "21"
             },
             "User Stickiness": {
               "February": "10.81%",
@@ -43,8 +40,8 @@
       "key_finding": "Average daily scores continued to fall rapidly, dropping another 57.7% from 28,986 in February to 12,265 in March. This ongoing downward trend confirms that even the retained player base is becoming less active or less motivated to achieve high scores.",
       "metrics": {
         "AVG Score per Day": {
-          "February": 28986,
-          "March": 12265,
+          "February": "28986",
+          "March": "12265",
           "difference": "-57.7%"
         }
       }
@@ -52,7 +49,7 @@
     {
       "page_number": 5,
       "title": "Game Performance (Time)",
-      "key_finding": "Playtime experienced a parallel decline, falling 53.1% from 32 minutes per day in February to just 15 minutes in March. Without fresh content or engaging events, players are completing shorter sessions and logging off earlier than in previous months.",
+      "key_finding": "Player engagement time has declined significantly, with the average daily session dropping from 32 minute in February to 15 minute in March a 53.1% decrease. This reduction in playtime correlates with lower scores, indicating a critical loss of user interest.",
       "metrics": {
         "AVG Time per Day": {
           "February": "32 minute",
@@ -60,6 +57,11 @@
           "difference": "-53.1%"
         }
       }
+    },
+    {
+      "page_number": 6,
+      "title": "Most-played stages | Most-cooked menus",
+      "key_finding": "Users continue to show a strong preference for 'Everyday Comfort Foods'."
     }
   ]
 }

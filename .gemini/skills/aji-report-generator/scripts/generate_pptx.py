@@ -124,24 +124,37 @@ def analyze_data(excel_path, month_str):
     res['stats']['conv_reg'] = (reg/click*100) if click else 0
     res['stats']['drop_off'] = ((reg-play)/reg*100) if reg else 0
     
-    for c in range(1, 10):
-        v = ws_sc.cell(row=1, column=c).value
-        if v == f'AVG({month_str.capitalize()})': res['stats']['avg_score'] = ws_sc.cell(row=2, column=c).value
-    prev_sc_label = f'AVG({m_prev.capitalize()})'
-    for c in range(1, 10):
-        if ws_sc.cell(row=1, column=c).value == prev_sc_label:
-            ps = ws_sc.cell(row=2, column=c).value
+    import re
+    def match_month_header(val, target_m):
+        if not val or not isinstance(val, str): return False
+        v_clean = val.replace(' ', '').lower()
+        return f"avg({target_m.lower()})" in v_clean or f"avg({target_m[:3].lower()})" in v_clean
+
+    full_target_m = calendar.month_name[month_num]
+    full_prev_m = calendar.month_name[prev_month_num]
+
+    for c in range(1, 15):
+        v = ws_sc.cell(row=2, column=c).value
+        if match_month_header(v, full_target_m): 
+            res['stats']['avg_score'] = ws_sc.cell(row=3, column=c).value
+    
+    for c in range(1, 15):
+        v = ws_sc.cell(row=2, column=c).value
+        if match_month_header(v, full_prev_m):
+            ps = ws_sc.cell(row=3, column=c).value
             if ps: 
                 res['stats']['prev_avg_score'] = ps
                 res['stats']['score_change'] = (res['stats']['avg_score'] - ps)/ps*100
             
-    for c in range(1, 10):
-        v = ws_ti.cell(row=1, column=c).value
-        if v == f'Avg ({month_str.capitalize()})': res['stats']['avg_time'] = ws_ti.cell(row=2, column=c).value
-    prev_ti_label = f'Avg ({m_prev.capitalize()})'
-    for c in range(1, 10):
-        if ws_ti.cell(row=1, column=c).value == prev_ti_label:
-            pt = ws_ti.cell(row=2, column=c).value
+    for c in range(1, 15):
+        v = ws_ti.cell(row=2, column=c).value
+        if match_month_header(v, full_target_m): 
+            res['stats']['avg_time'] = ws_ti.cell(row=3, column=c).value
+            
+    for c in range(1, 15):
+        v = ws_ti.cell(row=2, column=c).value
+        if match_month_header(v, full_prev_m):
+            pt = ws_ti.cell(row=3, column=c).value
             if pt:
                 res['stats']['prev_avg_time'] = pt
                 res['stats']['time_change'] = (res['stats']['avg_time'] - pt)/pt*100

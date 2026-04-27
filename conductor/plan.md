@@ -40,9 +40,9 @@ Once the XMLs are patched, the script zips the entire directory back into a `.pp
 
 ## AI Agent Workflow Mandate (Strict Sequential Execution)
 When asked to generate a report, the AI agent MUST strictly follow these sequential steps without skipping:
-1.  **STEP 1: Sync Excel (`excel-graph-updater`)**: Run `update_graphs.py` to slice the master Excel file for the requested month, creating a new month-specific `.xlsx` file (e.g., `Aji_game copy_Feb.xlsx`).
-2.  **STEP 2: Analyze & Correlate (`excel-data-analyzer`)**: Run `extract_data.py` on the newly created Excel file and template PPTX. The AI must then write a structured JSON file (e.g., `analysis_output_Feb.json`) containing tailored, data-driven key findings.
-3.  **STEP 3: Generate PPTX (`aji-report-generator`)**: Run `generate_pptx.py` to inject the raw Excel data and JSON insights into the PowerPoint template's XML, creating the final `.pptx` report.
+1.  **STEP 1: Sync Excel (`excel-graph-updater`)**: Run `update_graphs.py` to slice the master Excel file for the requested month, creating a new month-specific `.xlsx` file (e.g., `Aji_game copy_Feb.xlsx`). **Do not proceed until you verify this new file was created successfully.**
+2.  **STEP 2: Analyze & Correlate (`excel-data-analyzer`)**: Run `extract_data.py` on the newly created Excel file (e.g., `Aji_game copy_Feb.xlsx`) and template PPTX. The AI must then write a structured JSON file (e.g., `analysis_output_Feb.json`) containing tailored, data-driven key findings. **Do not proceed until the JSON file is fully written and verified.**
+3.  **STEP 3: Generate PPTX (`aji-report-generator`)**: Run `generate_pptx.py` to inject the raw Excel data and JSON insights into the PowerPoint template's XML, creating the final `.pptx` report. **CRITICAL: You MUST use the newly created Excel file from Step 1 (e.g., `Aji_game copy_Feb.xlsx`) as the input for this command, NOT the generic master file.**
 
 ## Skill Locations
 -   `.gemini/skills/aji-report-generator`: The primary skill for generating the end-to-end report.
