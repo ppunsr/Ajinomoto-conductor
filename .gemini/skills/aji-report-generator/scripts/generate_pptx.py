@@ -264,8 +264,14 @@ def update_pptx(excel_path, template_path, output_path, month):
         for filename in os.listdir(drawings_dir):
             if filename == 'drawing1.xml':
                 dpath = os.path.join(drawings_dir, filename)
+                with open(dpath, 'r', encoding='utf-8') as df:
+                    d_content = df.read()
+                
+                # Surgically remove only TextBox 33 (which contains the ghost data) to preserve the red rectangle
+                d_content = re.sub(r'<cdr:relSizeAnchor(?:(?!</cdr:relSizeAnchor>).)*?name="TextBox 33".*?</cdr:relSizeAnchor>', '', d_content, flags=re.DOTALL)
+                
                 with open(dpath, 'w', encoding='utf-8') as df:
-                    df.write('<c:userShapes xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart"/>')
+                    df.write(d_content)
 
     slides_dir = os.path.join(temp_dir, 'ppt', 'slides')
     for filename in os.listdir(slides_dir):
