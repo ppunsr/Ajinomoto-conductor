@@ -259,6 +259,14 @@ def update_pptx(excel_path, template_path, output_path, month):
         if content != orig:
             with open(path, 'w', encoding='utf-8') as f: f.write(content)
             
+    drawings_dir = os.path.join(temp_dir, 'ppt', 'drawings')
+    if os.path.exists(drawings_dir):
+        for filename in os.listdir(drawings_dir):
+            if filename == 'drawing1.xml':
+                dpath = os.path.join(drawings_dir, filename)
+                with open(dpath, 'w', encoding='utf-8') as df:
+                    df.write('<c:userShapes xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart"/>')
+
     slides_dir = os.path.join(temp_dir, 'ppt', 'slides')
     for filename in os.listdir(slides_dir):
         if not filename.endswith('.xml') or '_' in filename: continue
